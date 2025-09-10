@@ -89,8 +89,153 @@
 </head>
 <body>
   <div class="wrap">
-    <!-- HEADER -->
-    ... (full content macam file asal yang kau bagi)
+    <header>
+      <div class="brand">
+        <div class="logo">DA</div>
+        <div>
+          <div class="site-title">D'Anggun Chalet</div>
+          <div style="font-size:13px;color:var(--muted)">cozy stays • nature • memories</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero card" id="home">
+      <div class="bg">
+        <div class="overlay">
+          <div class="hero-inner">
+            <h1>Escape to calm at D'Anggun</h1>
+            <p>Private wooden chalet tucked among gentle hills — the perfect place to rest, reconnect, and make small unforgettable memories.</p>
+            <a class="cta" href="#booking">Check Availability</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section">
+      <div class="about">
+        <div class="text card">
+          <h2>About D'Anggun Chalet</h2>
+          <p>We crafted D'Anggun to be a quiet retreat — timber interiors, warm lights, and big windows that look onto the valley. Perfect for couples, families, and anyone who needs a short escape from the city's noise.</p>
+          <div class="features">
+            <div class="feature">
+              <h4>Fully equipped kitchen</h4>
+              <p style="margin:0;font-size:13px;color:var(--muted)">Cook simple meals and enjoy together.</p>
+            </div>
+            <div class="feature">
+              <h4>Outdoor terrace</h4>
+              <p style="margin:0;font-size:13px;color:var(--muted)">Coffee with a sunrise — ideal moment.</p>
+            </div>
+            <div class="feature">
+              <h4>Fast Wi-Fi</h4>
+              <p style="margin:0;font-size:13px;color:var(--muted)">Work remotely if you need to.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media card">
+          <img src="https://images.unsplash.com/photo-1505691723518-36a8b7d0f3b3?q=80&w=1200&auto=format&fit=crop" alt="Chalet photo">
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section card" id="gallery">
+      <h3 style="margin-top:0;font-family:Playfair Display,serif;color:#3f332b">Gallery</h3>
+      <p style="margin:8px 0 18px 0;color:var(--muted)">Tap any photo to view larger.</p>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=1200&auto=format&fit=crop" alt="1" onclick="openLightbox(this.src)">
+        <img src="https://images.unsplash.com/photo-1505691723518-36a8b7d0f3b3?q=80&w=1200&auto=format&fit=crop" alt="2" onclick="openLightbox(this.src)">
+        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1200&auto=format&fit=crop" alt="3" onclick="openLightbox(this.src)">
+        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop" alt="4" onclick="openLightbox(this.src)">
+        <img src="https://images.unsplash.com/photo-1505765059890-7b9d2c6f0d3a?q=80&w=1200&auto=format&fit=crop" alt="5" onclick="openLightbox(this.src)">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="6" onclick="openLightbox(this.src)">
+      </div>
+    </section>
+
+    <!-- BOOKING / CONTACT -->
+    <section class="section card" id="booking">
+      <h3 style="margin-top:0;font-family:Playfair Display,serif;color:#3f332b">Booking</h3>
+      <div class="contact-grid" style="margin-top:16px">
+        <div>
+          <p style="margin-top:0;color:var(--muted)">Choose dates and reach out — we will reply within 24 hours to confirm availability and pricing.</p>
+          <form onsubmit="handleBooking(event)">
+            <label class="small">Name</label>
+            <input id="bk-name" required placeholder="Full name">
+            <label class="small" style="margin-top:8px">Email</label>
+            <input id="bk-email" type="email" required placeholder="you@example.com">
+            <label class="small" style="margin-top:8px">Message</label>
+            <textarea id="bk-msg" rows="4" placeholder="Dates, number of guests, notes"></textarea>
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <button type="submit">Send Booking Request</button>
+              <a href="mailto:info@danggun.com" style="margin-left:8px;color:var(--muted)">Or email directly</a>
+            </div>
+          </form>
+        </div>
+        <div style="align-self:start">
+          <div class="card" style="padding:14px">
+            <h4 style="margin:0 0 8px 0;color:#3f332b">Quick Info</h4>
+            <p style="margin:0 0 6px 0;font-size:14px;color:var(--muted)">Price: from RM 250/night</p>
+            <p style="margin:0 0 6px 0;font-size:14px;color:var(--muted)">Check-in: 3:00 PM • Check-out: 12:00 PM</p>
+            <p style="margin:0;font-size:14px;color:var(--muted)">Max guests: 4</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div style="max-width:var(--maxw);margin:0 auto;padding:10px 18px">
+        <div style="margin-bottom:8px">© <strong>D'Anggun Chalet</strong> — 2025</div>
+        <div style="font-size:13px;color:#a89a8f">Made with ❤️ • Edit this file to replace images, text, and contact details.</div>
+      </div>
+    </footer>
+
   </div>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:20px;z-index:9999">
+    <div style="max-width:1100px;width:100%;">
+      <button onclick="closeLightbox()" style="float:right;background:transparent;border:0;color:white;font-size:22px">✕</button>
+      <img id="lightbox-img" src="" style="width:100%;border-radius:8px;display:block;box-shadow:0 20px 50px rgba(0,0,0,0.6)">
+    </div>
+  </div>
+
+  <script>
+    // Simple JS: lightbox and booking mailto fallback
+    function openLightbox(src){
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox(){
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function handleBooking(e){
+      e.preventDefault();
+      var name = document.getElementById('bk-name').value;
+      var email = document.getElementById('bk-email').value;
+      var msg = document.getElementById('bk-msg').value;
+      var subject = encodeURIComponent('Booking request from ' + name);
+      var body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg);
+      window.location.href = 'mailto:info@danggun.com?subject='+subject+'&body='+body;
+    }
+
+    // Smooth scroll for nav (optional)
+    document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        var t = document.querySelector(this.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
 </body>
 </html>
